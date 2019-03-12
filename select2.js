@@ -692,7 +692,8 @@ the specific language governing permissions and limitations under the Apache Lic
 
             this.container.attr("title", opts.element.attr("title"));
 
-            this.body = this.opts.container ? $(this.opts.container) : $("body");
+            var modal = document.querySelector('#modals dialog[open]:not([data-dialog-out])');
+            this.body = modal ? $(modal) : $("body");
 
             syncCssClasses(this.container, this.opts.element, this.opts.adaptContainerCssClass);
 
