@@ -716,9 +716,9 @@ the specific language governing permissions and limitations under the Apache Lic
 
             this.container.attr("title", opts.element.attr("title"));
 
-            var $modal = this.select.closest("dialog");
+            var $modal = this.opts.element.closest("dialog");
             this.body = $modal.length > 0 ? $modal : $("body");
-      
+
 
             syncCssClasses(this.container, this.opts.element, this.opts.adaptContainerCssClass);
 
